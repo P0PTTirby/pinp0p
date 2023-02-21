@@ -1,3 +1,14 @@
+input.onButtonPressed(Button.A, function () {
+    pins.servoWritePin(AnalogPin.P0, 180)
+})
+input.onButtonPressed(Button.B, function () {
+    pins.servoSetPulse(AnalogPin.P0, 1500)
+    basic.pause(200)
+    pins.servoSetPulse(AnalogPin.P0, 1500)
+    basic.pause(200)
+    pins.servoSetPulse(AnalogPin.P0, 1500)
+    basic.pause(200)
+})
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -122,4 +133,7 @@ basic.forever(function () {
         led.plotBrightness(3, 1, 0)
     }
     basic.pause(500)
+})
+basic.forever(function () {
+	
 })
