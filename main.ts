@@ -1,13 +1,20 @@
 input.onButtonPressed(Button.A, function () {
-    pins.servoWritePin(AnalogPin.P0, 180)
+    servos.P0.run(50)
+    pins.servoWritePin(AnalogPin.P0, 360)
+    pins.servoWritePin(AnalogPin.P2, 360)
+    pins.servoWritePin(AnalogPin.P2, 360)
+})
+function doSomething (list: any[]) {
+	
+}
+input.onButtonPressed(Button.AB, function () {
+    servos.P0.run(0)
 })
 input.onButtonPressed(Button.B, function () {
-    pins.servoSetPulse(AnalogPin.P0, 1500)
-    basic.pause(200)
-    pins.servoSetPulse(AnalogPin.P0, 1500)
-    basic.pause(200)
-    pins.servoSetPulse(AnalogPin.P0, 1500)
-    basic.pause(200)
+    servos.P0.run(-50)
+    pins.servoWritePin(AnalogPin.P0, -360)
+    pins.servoWritePin(AnalogPin.P2, -360)
+    pins.servoWritePin(AnalogPin.P2, -360)
 })
 basic.showLeds(`
     . . . . .
